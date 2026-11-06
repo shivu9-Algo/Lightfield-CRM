@@ -1,0 +1,1 @@
+{"dependencies":{"@next/swc-win32-x64-msvc":"^15.5.28","@tailwindcss/postcss":"^4.1.14","lightningcss-win32-x64-msvc":"^1.33.0","next":"^15.5.4","react":"^19.2.0","react-dom":"^19.2.0","tailwindcss":"^4.1.14"},"name":"lightfield-mini-crm","private":true,"scripts":{"build":"next build","dev":"next dev","start":"next start"},"version":"1.0.0"}
