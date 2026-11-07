@@ -101,7 +101,7 @@ function fallbackExtract(rawText) {
 
   const nextAction =
     firstMatch(t, [
-      /([^.]*?(?:follow up|schedule|send|share|call|meet|discuss|confirm|get)[^.]*[.!?])/i,
+      /([^.!?]*?\b(?:follow up|schedule|send|share|call|meet|discuss|confirm|get)\b[^.!?]*[.!?])/i,
     ]) || ''
 
   const dueDate =
