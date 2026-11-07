@@ -78,10 +78,10 @@ function fallbackExtract(rawText) {
 
   const contactName =
     firstMatch(t, [
-      /(?:i am|i'm|this is|my name is)\s+([A-Z][a-z]+(?:\s+[A-Z][a-z]+){0,2})/i,
-      /regards,?\s+([A-Z][a-z]+(?:\s+[A-Z][a-z]+){0,2})/i,
-      /^\s*[-–—]\s*([A-Z][a-z]+(?:\s+[A-Z][a-z]+){0,2})\s*$/m,
-      /met with\s+([A-Z][a-z]+(?:\s+[A-Z][a-z]+){0,2})/i,
+      /(?:i am|i'm|this is|my name is)\s+([A-Z][a-z]+(?:\s+(?!from\b)[A-Z][a-z]+){0,2})/i,
+      /regards,?\s+([A-Z][a-z]+(?:\s+(?!from\b)[A-Z][a-z]+){0,2})/i,
+      /^\s*[-–—]\s*([A-Z][a-z]+(?:\s+(?!from\b)[A-Z][a-z]+){0,2})\s*$/m,
+      /met with\s+([A-Z][a-z]+(?:\s+(?!from\b)[A-Z][a-z]+){0,2})/i,
     ]) || 'Unknown'
 
   let organization = firstMatch(t, [
@@ -95,7 +95,7 @@ function fallbackExtract(rawText) {
   }
 
   const dealValue =
-    firstMatch(t, [/(?:₹|\$|Rs\.?)\s?[\d,]+(?:\.\d+)?/]) ||
+    firstMatch(t, [/(?:₹|\$|Rs\.?)\s?[\d,]*\d(?:\.\d+)?/]) ||
     firstMatch(t, [/((?:Platinum|Gold|Silver|Bronze)\s+Sponsor)/i]) ||
     ''
 
