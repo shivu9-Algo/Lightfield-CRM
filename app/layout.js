@@ -1,7 +1,7 @@
 import "./globals.css";
 
 export const metadata = {
-  title: "Lightfield Mini CRM",
+  title: "Lightfield CRM",
   description: "AI-native micro-CRM for freelancers and student clubs",
 };
 
