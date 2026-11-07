@@ -85,9 +85,9 @@ function fallbackExtract(rawText) {
     ]) || 'Unknown'
 
   let organization = firstMatch(t, [
+    /\(([A-Z][\w&]*(?:\s+[A-Z][\w&]*){0,2})\)/,
     /from\s+([A-Z][\w&]*(?:\s+[A-Z][\w&]*){0,2})/,
     /(?:at|with)\s+([A-Z][\w&]*(?:\s+[A-Z][\w&]*){0,2})/,
-    /\(([A-Z][\w&]*(?:\s+[A-Z][\w&]*){0,2})\)/,
   ])
   if (!organization && emailOrHandle.includes('@')) {
     const domain = emailOrHandle.split('@')[1].split('.')[0]
